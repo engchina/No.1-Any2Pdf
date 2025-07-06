@@ -20,7 +20,7 @@ def create_app():
 
     with gr.Blocks(title="会議記録チェックシステム", css=custom_css, theme=theme) as demo:
         gr.Markdown("# RAG精度あげたろう - 前処理", elem_classes="main_Header")
-        gr.Markdown(value="### PDFをMarkdownへ変換するツール",
+        gr.Markdown(value="### Officeファイルまたは画像をPDFへ変換するツール",
                     elem_classes="sub_Header")
 
         with gr.Tabs():

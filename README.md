@@ -156,3 +156,6 @@ python -m app.app
 
 http://localhost:7860
 
+
+
+![image-20250706111135974](images/image-20250706111135974.png)
