@@ -70,7 +70,7 @@ apt install -y fonts-noto-cjk fonts-noto-cjk-extra fonts-ipafont fonts-takao fon
 # fonts-wqy-zenhei      # 文泉驛繁体字
 ```
 
-## 3. Conda のインストールと仮想環境の作成
+## 3. Conda のインストール
 
 1. Conda インストールスクリプトをダウンロード
 
@@ -132,7 +132,7 @@ Conda の base 環境をデフォルトで有効化したくない場合：
 conda config --set auto_activate_base false
 ```
 
-## 4. 依存関係のインストール
+## 4. 仮想環境の作成と依存関係のインストール
 
 仮想環境を作成
 
@@ -145,4 +145,14 @@ conda activate no.1-any2pdf
 pip install -r requirements.txt
 # pip list --format=freeze > requirements.txt
 ```
+
+## 5. アプリケーションの起動
+
+```
+python -m app.app
+```
+
+## 6. アプリケーションのアクセス
+
+http://localhost:7860
 

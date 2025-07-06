@@ -4,6 +4,7 @@ from functools import wraps
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+
 def safe_file_operation(func):
     """ファイル操作デコレータ - 安全なファイル処理を保証"""
 

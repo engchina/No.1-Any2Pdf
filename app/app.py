@@ -1,12 +1,13 @@
 # 標準ライブラリのインポート
+import gradio as gr
 import os
 
 # ローカルアプリケーションのインポート
 from .css import custom_css
 from .pdf_converter import (
-    convert_image_to_pdf, convert_office_file_to_pdf
+    convert_office_file_to_pdf, convert_image_to_pdf
 )
-import gradio as gr
+
 
 def create_app():
     """Gradioアプリケーションインスタンスを作成して返す"""
@@ -31,7 +32,8 @@ def create_app():
                     with gr.Column(scale=1):
                         # ファイルアップロード領域
                         file_input = gr.File(label="Officeファイルまたは画像をアップロード",
-                                             file_types=[".docx", ".pptx", ".xlsx", ".doc", ".ppt", ".xls", ".jpg", ".jpeg", ".png"])
+                                             file_types=[".docx", ".pptx", ".xlsx", ".doc", ".ppt", ".xls", ".jpg",
+                                                         ".jpeg", ".png"])
 
                         # ボタンとログのレイアウト
                         with gr.Row():
@@ -55,9 +57,10 @@ def create_app():
                             visible=False,
                             interactive=False,
                             container=False
-                        )   
+                        )
 
-                # ファイル変換を処理する関数
+                        # ファイル変換を処理する関数
+
                 def convert_file(file):
                     """アップロードされたファイルをPDFに変換する"""
                     if not file:
@@ -98,7 +101,7 @@ def create_app():
         gr.Markdown(
             value="### 本ソフトウェアは検証評価用です。日常利用のための基本機能は備えていない点につきましてご理解をよろしくお願い申し上げます。",
             elem_classes="sub_Header")
-        gr.Markdown(value="### Developed by Oracle Japan", elem_classes="sub_Header")                                             
+        gr.Markdown(value="### Developed by Oracle Japan", elem_classes="sub_Header")
 
     return demo
 
@@ -113,4 +116,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
