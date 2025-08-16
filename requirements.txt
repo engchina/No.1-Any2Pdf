@@ -61,3 +61,5 @@ uvicorn==0.35.0
 websockets==15.0.1
 wheel==0.45.1
 wrapt==1.17.2
+Flask==3.0.0
+Werkzeug==3.0.1
